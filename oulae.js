@@ -97,6 +97,11 @@ const productRandomNumber = (min, max, n) => {
     return Number((Math.random() * (max - min) + min).toFixed(n))
 }
 
+// 判断一个对象是否为空对象
+const isEmptyObject = (obj) => {
+    return Object.keys(obj).length === 0;
+}
+
 // 判断对象a, b两个对象在数值上是否相等
 const isObjectValueEqual = (a, b) => {
     // 如果 a, b相等，则返回 true，否则返回 false
@@ -162,7 +167,7 @@ const readFile = (path) => {
 }
 
 // 时延函数，该函数表示等待delayTime 秒之后，再执行下一个语句，可用于测试
-const timeDelay = (delayTime) =>{
+const timeDelay = (delayTime) => {
     // delayTime表示等待的时间
     let time = new Date()
     // console.log(time.getTime())
